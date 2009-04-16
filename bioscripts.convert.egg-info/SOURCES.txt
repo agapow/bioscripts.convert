@@ -1,0 +1,15 @@
+README.txt
+setup.cfg
+setup.py
+bioscripts/__init__.py
+bioscripts.convert.egg-info/PKG-INFO
+bioscripts.convert.egg-info/SOURCES.txt
+bioscripts.convert.egg-info/dependency_links.txt
+bioscripts.convert.egg-info/entry_points.txt
+bioscripts.convert.egg-info/namespace_packages.txt
+bioscripts.convert.egg-info/not-zip-safe
+bioscripts.convert.egg-info/requires.txt
+bioscripts.convert.egg-info/top_level.txt
+bioscripts/convert/__init__.py
+bioscripts/convert/convalign.py
+bioscripts/convert/convbioseq.py
