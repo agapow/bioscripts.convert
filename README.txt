@@ -53,6 +53,9 @@ Due to limitations on identifiers in certain formats, sequence names
 may differ between input and output files. Also, not all formats understood by
 Biopython have been enabled, due to being untested or incomplete.
 
+Depending on your platform, the scripts may be installed as ``.py`` scripts,
+or some form of executable, or both.
+
 
 convbioseq
 ----------

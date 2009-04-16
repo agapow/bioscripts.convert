@@ -15,7 +15,7 @@ scripts may be installed seperately.
 """
 
 __docformat__ = 'restructuredtext en'
-__version__ = "0.3.1"
+__version__ = "0.3.2"
 __author__ = 'Paul-Michael Agapow <agapow@bbsrc.ac.uk>'
 
 
@@ -31,4 +31,4 @@ if __name__ == '__main__':
 	_doctest()
 
 
-### END ########################################################################
+### END ######################################################################
