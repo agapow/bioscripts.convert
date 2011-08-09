@@ -18,49 +18,15 @@ from exceptions import BaseException
 
 from Bio import SeqIO
 
+from defs import *
+
 try:
 	from bioscripts.convert import __version__
 except:
 	__version__ = 'unknown'
-	
+
 
 ### CONSTANTS & DEFINES ###
-# Formats in SeqIO that we don't parse as yet. There's no actual problem,
-# these just need to be checked:
-# ace embl fastq fastq-solex ig pir swiss tab qual
-
-# what extensions to give for each output format
-OUT_EXT_MAP = {
-	'clustal': 'aln',
-	'fasta': 'fasta',
-	'genbank': 'gb', 
-	'nexus': 'nexus',
-	'phd': 'phd',
-	'phylip': 'phy',
-	'stockholm': 'sth',
-	'qual': 'qual',
-	'tab': 'tab',
-}
-
-# the list of known formats
-KNOWN_FMTS = sorted (OUT_EXT_MAP.keys())
-
-# what format to derive from inout extensions
-# always accept the format name as an extension
-IN_EXT_MAP = {
-	'aln': 'clustal',
-	'sth': 'stockholm',
-	'gb': 'genbank',
-	'nxs': 'nexus',
-	'phy': 'phylip',
-	'tab': 'tab',
-	'qual': 'qual',
-	'phd': 'phd',
-}
-IN_EXT_MAP.update (dict ([(x, x) for x in KNOWN_FMTS]))
-
-_DEV_MODE = True
-
 
 ### IMPLEMENTATION ###
 
@@ -87,7 +53,13 @@ def parse_args():
 		 help='''The extension of the output biosequence files. If not supplied, this will be inferred from the output format.''',
 		metavar='EXTENSION',
 	)
-			
+	
+	optparser.add_option ('--input-format', '-i',
+		 dest="input_format",
+		 help='''The format of the input biosequence files. If not supplied, this will be inferred from the extension of the files.''',
+		metavar='FORMAT',
+	)
+	
 	#optparser.add_option ('--verbose', '-v',
 	#	 dest="verbose",
 	#	 help='''How much output to generate.''')

@@ -12,10 +12,7 @@ files on the commandline.
 Installation
 ============
 
-bioscripts.convert [#homepage]_ can be installed in a number of ways.
-Biopython [#biopython]_ is required. Either of the automated methods using
-setuptools [#setuptools]_ are preferred, but a manual installation will
-suffice if need be.
+bioscripts.convert [#homepage]_ can be installed in a number of ways:
 
 Via setuptools / easy_install
 -----------------------------
@@ -45,17 +42,11 @@ Manual
 Download and unpack the tarball as above. Ensure Biopython is available. Copy
 the scripts in bioscripts/convert to a location they can be called from.
 
+Biopython [#biopython]_ is a prerequisite.
+
 
 Usage
 =====
-
-Due to limitations on identifiers in certain formats, sequence names
-may differ between input and output files. Also, not all formats understood by
-Biopython have been enabled, due to being untested or incomplete.
-
-Depending on your platform, the scripts may be installed as ``.py`` scripts,
-or some form of executable, or both.
-
 
 convbioseq
 ----------
@@ -133,8 +124,8 @@ extensions for output formats are '.nxs' (nexus), '.phy' (phylip), '.fasta'
 (fasta), '.aln' (clustal), '.sth' (stockholm).
 
 
-Developer notes
-===============
+Limitations
+===========
 
 This module is not intended for importing, but the setuptools packaging and
 infrastructure make for simple distribution of scripts, allowing the checking
@@ -142,6 +133,16 @@ of prerequisites, consistent installation and updating.
 
 The ``bioscripts`` namespace was chosen as a convenient place to "keep" these
 scripts and is open to other developers.
+
+Due to limitations on identifiers in certain formats, sequence names
+may differ between input and output files. Also, not all formats understood by
+Biopython have been enabled, due to being untested or incomplete.
+
+Depending on your platform, the scripts may be installed as ``.py`` scripts,
+or some form of executable, or both.
+
+Some formats (e.g. FASTA) do not specify sequence type, while others (e.g. 
+NEXUS), aboslutely require it. The sequence type option may be required. 
 
 
 References
