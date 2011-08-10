@@ -15,8 +15,8 @@ scripts may be installed seperately.
 """
 
 __docformat__ = 'restructuredtext en'
-__version__ = "0.3.2"
-__author__ = 'Paul-Michael Agapow <agapow@bbsrc.ac.uk>'
+__version__ = '0.4'
+__author__ = 'Paul-Michael Agapow <pma@agapow.net>'
 
 
 ### IMPORTS ###

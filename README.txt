@@ -61,15 +61,18 @@ with the options:
   -h, --help            show this help message and exit
   -i FORMAT, --input-format=FORMAT
                         The format of the input biosequence files. If not
-                        supplied, this will be inferred from the extension of
+                        supplied, this will be inferred from the extension of 
                         the files.
   -e EXTENSION, --output-extension=EXTENSION
                         The extension of the output biosequence files. If not
-                        supplied, this will be inferred from the output
-                        format.
+                        supplied, this will be inferred from the output format.
+  -t TYPE, --seqtype=TYPE
+                        The type of sequence (dna or protein) being converted.
+                        Often this can be inferred from the input file, but 
+                        sometimes must be explicitly set.
 
-FORMAT must be one of 'clustal', 'fasta', 'genbank', 'nexus', 'phd', 'phylip',
-'qual', 'stockholm'. The input formats inferred from extensions are clustal
+FORMAT must be one of clustal, fasta, genbank, nexus, phd, phylip, qual,
+stockholm, tab. The input formats inferred from extensions are clustal
 ('.aln'), genbank ('.genbank'), nexus ('.nxs'), nexus ('.nexus'), phylip
 ('.phylip'), stockholm ('.sth'), phd ('.phd'), qual ('.qual'), phylip
 ('.phy'), clustal ('.clustal'), genbank ('.gb'), tab ('.tab'), fasta
@@ -142,7 +145,9 @@ Depending on your platform, the scripts may be installed as ``.py`` scripts,
 or some form of executable, or both.
 
 Some formats (e.g. FASTA) do not specify sequence type, while others (e.g. 
-NEXUS), aboslutely require it. The sequence type option may be required. 
+NEXUS), absolutely require it. Thus, the sequence type option may need to be 
+explicitly specified. Older versions of Biopython contain a bug that will prevent 
+conversion to nexus format for associated reasons.
 
 
 References
