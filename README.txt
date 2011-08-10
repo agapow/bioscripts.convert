@@ -12,10 +12,11 @@ files on the commandline.
 Installation
 ============
 
-bioscripts.convert [#homepage]_ can be installed in a number of ways:
+bioscripts.convert [#homepage]_ can be installed in a number of ways.
+Biopython [#biopython]_ is a prerequisite.
 
-Via setuptools / easy_install
------------------------------
+Via easy_install or equivalent
+------------------------------
 
 From the commandline call::
 
@@ -36,24 +37,19 @@ install::
 	
 Superuser privileges may be required. 
 
-Manual
-------
-
-Download and unpack the tarball as above. Ensure Biopython is available. Copy
-the scripts in bioscripts/convert to a location they can be called from.
-
-Biopython [#biopython]_ is a prerequisite.
 
 
 Usage
 =====
 
-convbioseq
-----------
 
 ::
 
 	convbioseq.py [options] FORMAT INFILES ...
+	
+or::
+
+	convalign.py [options] FORMAT INFILES ...
 
 with the options:
 
@@ -98,33 +94,6 @@ it assumes are Fasta formatted.
 will produce two Clustal formatted files 'one.foo' and 'two.foo' from files
 it assumes are Fasta and Nexus formatted respectively.	
 
-
-convalign
----------
-
-::
-
-	convalign.py [options] FORMAT INFILES ...
-
-with the options:
-
-  --version             show program's version number and exit
-  -h, --help            show this help message and exit
-  -i FORMAT, --input-format=FORMAT
-                        The format of the input alignment files. If not
-                        supplied, this will be inferred from the extension of
-                        the files.
-  -e EXTENSION, --output-extension=EXTENSION
-                        The extension of the output alignment files. If not
-                        supplied, this will be inferred from the output
-                        format.
-
-FORMAT must be one of 'clustal', 'fasta', 'nexus', 'phylip', 'stockholm'. The
-input formats inferred from extensions are clustal ('.aln'), nexus ('.nxs'),
-nexus ('.nexus'), phylip ('.phylip'), stockholm ('.sth'), phylip ('.phy'),
-clustal ('.clustal'), stockholm ('.stockholm'), fasta ('.fasta'). The default
-extensions for output formats are '.nxs' (nexus), '.phy' (phylip), '.fasta'
-(fasta), '.aln' (clustal), '.sth' (stockholm).
 
 
 Limitations
